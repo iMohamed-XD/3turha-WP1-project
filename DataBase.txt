@@ -1,0 +1,33 @@
+
+---------------note(names are CASE SENSITIVE)---------------
+
+Database name : 3turha
+    table name: products
+    coloumns : 
+        id INT PRIMARY KEY AUTO INCREMNT
+        name VARCHAR 255
+        price decimal 10,2
+        discount decimal 5,2
+        description TEXT
+
+    table name : users
+    coloumns :
+        id INT PRIMARY KEY AUTO INCREMNT
+        username VARCHAR 255
+        FirstName VARCHAR 255
+        LastName VARCHAR 255
+        password VARCHAR 255
+
+    table name : orders
+    colomuns :
+        id INT PRIMARY KEY AUTO INCREMNT
+        product_id INT
+        user_id INT
+        total_price decimal 10,2
+
+    table name : feedback
+    coloumns :
+        id INT PRIMARY KEY AUTO INCREMNT
+        username VARCHAR(255) NOT NULL,
+        feedback TEXT NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP

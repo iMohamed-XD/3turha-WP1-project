@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #2D2D2D;
+    border-bottom: 1px solid #d7c150;
+
+    position: sticky;
+    top: 0;             
+    z-index: 999;      
+}
+
+
+.logo img {
+    height: 75px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(32, 29, 29);
+    padding: 10px 20px;
+    border-radius: 10px;
+    height: 60px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #E8D575;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #FFFFFF;
+    transform: scale(1.1);
+}
+.footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    padding: 40px 50px;
+    background-color: #2D2D2D;
+    border-top: 2px solid #E8D575;
+}
+
+.footer-column h3 {
+    color: #E8D575;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.footer-column p,
+.footer-column a,
+.footer-column li {
+    color: #E0E0E0;
+    list-style: none;
+    text-decoration: none;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.footer-column a:hover {
+    color: #FFFFFF;
+}
+
+.footer-column iframe {
+    border-radius: 8px;
+    border: 1px solid #E8D575;
+}
+.Socials{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.Socials{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* social icons */
+.Socials a img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    filter: grayscale(100%); 
+    transition: 0.25s ease;
+    display: inline-block;
+}
+
+.Socials a img:hover {
+    filter: grayscale(0%); 
+    transform: scale(1.1); 
+}
+
+/* google form icon below socials */
+.google-forms {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+/* make the google icon slightly larger and visually separated */
+.google-forms a img {
+    width: 30px;
+    height: 30px;
+    filter: grayscale(100%);
+    transition: 0.25s ease;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.google-forms a img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* fallback text link when image missing */
+.google-forms .form-text {
+    color: #E8D575;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 6px;
+}
+#backTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #E8D575;
+    border: none;
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 0 10px #E8D575;
+    transition: 0.3s;
+}
+
+#backTop:hover {
+    transform: scale(1.1);
+    background: white;
+}
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: #E8D575;
+    width: 0%;
+    z-index: 1000;
+}
+#rotating {
+    font-size: 28px;
+    font-weight: 600;
+    color: #E8D575;
+    text-align: center;
+    margin: 20px 0;
+    letter-spacing: 1px;
+}
+
+
+/* Mobile style */
+@media (max-width: 600px) {
+    .nav {
+        padding: 8px 10px;
+        height: 50px;
+        gap: 8px;
+    }
+
+    .nav a {
+        font-size: 14px;
+    }
+
+    .logo img {
+        height: 55px;
+    }
+}
+/* Medium screens: 600px to 1000px */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .nav {
+        padding: 10px 20px;       
+        gap: 15px;                
+        height: 60px;             
+    }
+
+    .nav a {
+        font-size: 16px;          
+    }
+
+    .logo img {
+        height: 65px;             
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        row-gap: 15px;
+    }
+
+    .nav {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider .slide img {
+        height: 250px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider .slide img {
+        height: 200px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+    }
+}
